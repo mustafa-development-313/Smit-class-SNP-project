@@ -1,96 +1,196 @@
+:root{
+    --red: #ed1c24;
+    --green: #28a745;
+    --white: #ffffff;
+    --black: #000000;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    font-size: 62.5%;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url('../assets/fonts/inter/Inter-normal.ttf');
+}
+@font-face {
+    font-family: Futurak;
+    src: url('../assets/fonts/futurak/futurak.TTF');
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+    font-family: Inter;
+}
+
+
 /* navbar started */
-.navbar{
-    background-color: black;
+.logo-image{
+    width: 165px;
+}
+
+.nav-items{
+    font-size: 1.6rem;
     display: flex;
-    justify-content: center;
     align-items: center;
+    gap: 25px;
 }
-.logo img{
-    width: 185px;
-    padding: 10px;
-}
-.link a{
+.nav-items > a {
+    color: var(--white);
     text-decoration: none;
-    color: white;
-    padding: 10px;
-    font-size: 20px;
-    font-weight: 700;
-    font-family: cursive;
-    margin-right: 15px;
+}
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.franchise-btn{
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+    padding: 15px 20px;
+    border-radius: 25px;
+    font-size: 1.5rem;
     cursor: pointer;
 }
-.btn1{
-    padding: 15px 8px;
-    background-color: transparent;
-    color: white;
-    border-radius: 40px;
-    border: 1px solid white;
-    font-size: 20px;
-    margin-left: 10px;
-}
-.btn2{
-    margin-left: 10px;
-    padding: 15px 8px;
-    color: white;
-    background-color: #ed1c24;
-    border-radius: 40px;
+
+.order-btn{
+    background-color: var(--red);
+    color: var(--white);
     border: none;
-    font-size: 20px;
+    padding: 15px 20px;
+    border-radius: 25px;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
-.arrow{
-    background-color: white;
-    border-radius: 50%;
-    color: #ed1c24;
-    font-weight: 800;
-    padding: 3px;
+
+.icon{
+    background-color: var(--white);
+    padding: 6px 8px;
+    border-radius: 20px;
+    color: var(--red);
+    margin-left: 3px;
+}
+.menu-icon{
+    color: var(--white);
+    font-size: 3rem;
+    display: none;
+}
+
+.menu-icon-mobile{
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.mobile-navbar{
+    
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 30px;
+    display: none;
+}
+
+.order-btn-mobile{
+    font-size: 1.2rem;
+}
+
+.logo-mobile-image{
+    width: 100px;
 }
 /* navbar ended */
 
-
-/* image 1 started */
-.image img{
+/* carousel started */
+.carousel-image{
     width: 100%;
 }
-/* image 1 ended */
+/* carousel ended */
 
 
+/* welcome container started */
+.welcome-container{
+    margin: 50px 0px;
+}
+.welcome-heading{
+    font-weight: 500;
+    font-size: 4rem;
+    text-align: center;
+}
 
-/* salt brands started */
-.head{
-     display: flex;
+.futurak-font{
+    font-family: Futurak;
+    font-size: 5.2rem;
+
+}
+
+.welcome-para{
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 20px 0px;
+    color: #FFFFFFB3;
+}
+
+.brands-order-btn{
+    background-color: transparent;
+    border: 1px solid #FFFFFFB3;
+    border-radius: 30px;
+    color: #FFFFFFB3;
+    font-size: 1.5rem;
+    padding: 10px 60px;
+}
+.brand-image{
+    background-color: var(--white);
+    border-radius: 5px;
+}
+.brand-children{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.brands-parent{
+    display: flex;
     justify-content: center;
+    gap: 20px;
     align-items: center;
-    font-size: 40px;
-    font-weight: 600;
-    /* word-spacing: 2px; */
-    letter-spacing: 2px;
+    margin: 60px 0px;
+    flex-wrap: wrap;
 }
-.brand{
-    font-size: 50px;
-    font-weight: 800;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-.span-head{
-    font-size: 35px;
-    font-weight: 600;
-    font-family:monospace;
-    display: flex;
-    justify-content: center;
+/* welcome container ended */
 
-}
-.brands p{
-    display: flex;
-    justify-content: center;
-    word-spacing: 2px;
-    font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin
+
+
+
+/* responsive media queries  */
+
+/* navbar started */
+@media(max-width: 1024px){
+    .menu-icon {
+        display: block;
+    }
+    .nav-items{
+        display: none;
+    }
+    .navbar{
+        justify-content: space-between;
+        margin: 10px  40px;
+        display: none;
+    }
+    .mobile-navbar{
+        display: flex;
+    }
 }
 
-/* salt brands ended */
+
+/* navbar ended */
+
+/* responsive media queries  */
+
+
